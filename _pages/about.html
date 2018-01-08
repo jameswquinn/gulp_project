@@ -1,0 +1,59 @@
+---
+photo: 'http://cdn.mos.cms.futurecdn.net/51dd8a4573756fb8d4cafe7a43ce4f6f.jpg'
+---
+{% extends "../_layouts/_base.html" %}
+{# Change meta tags for twitter:card and facbook #}
+{% block canonical %}/about{% endblock %}
+{% block description %}Fashion{% endblock %}
+{% block og__image %}https://upload.wikimedia.org/wikipedia/commons/a/a6/Carolina_Herrera_AW14_12.jpg{% endblock %}
+{% block title %}{% endblock %}
+{% block content %}
+<h1>about</h1>
+
+<img src="{{photo}}" alt="">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Carolina_Herrera_AW14_12.jpg" alt="">
+<img src="https://d21e8thgsgi8s5.cloudfront.net/sites/default/files/styles/blog_author/public/pictures/lV2Hprnr-85.jpg" alt="">
+<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim distinctio, animi quam, architecto voluptatem, pariatur maiores harum placeat voluptatibus neque quae dolorem nisi beatae mollitia impedit ad consectetur porro, laborum.</blockquote>
+{% markdown %}
+    # Embed
+    markdown directly in your template…
+    Colons can be used to align columns.
+
+    | Tables        | Are           | Cool  |
+    | ------------- |:-------------:| -----:|
+    | col 3 is      | right-aligned | $1600 |
+    | col 2 is      | centered      |   $12 |
+    | zebra stripes | are neat      |    $1 |
+
+    There must be at least 3 dashes separating each header cell.
+    The outer pipes (|) are optional, and you don't need to make the
+    raw Markdown line up prettily. You can also use inline Markdown.
+
+    Markdown | Less | Pretty
+    --- | --- | ---
+    *Still* | `renders` | **nicely**
+    1 | 2 | 3
+
+    # H1
+    ## H2
+    ### H3
+    #### H4
+    ##### H5
+    ###### H6
+
+    Alternatively, for H1 and H2, an underline-ish style:
+
+    Alt-H1
+    ======
+
+    Alt-H2
+    ------
+
+
+
+
+    ### Template code
+
+
+{% endmarkdown %}
+{% endblock %}

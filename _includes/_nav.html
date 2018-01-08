@@ -1,0 +1,10 @@
+<!-- Navigation Partial -->
+<nav class="maskhead__navigation">
+    <ul>
+        {% for item in navigation %}
+            <li>
+              <a target="_self" href="{{ item['href'] }}">{{ item.label |lower }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

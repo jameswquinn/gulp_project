@@ -1,0 +1,31 @@
+
+// Stripes
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.stripes {
+  display: grid;
+  grid: repeat(5, 200px) / repeat(10, 1fr)
+}
+.stripes :nth-child(1) {
+  grid-column: span 3
+}
+.stripes :nth-child(2) {
+  grid-area: 3 / span 3 / auto / -1
+}
+.stripes :nth-child(3) {
+  grid-row: 4;
+  grid-column: span 5
+}
+.stripes {
+  transform: skewY(-12deg);
+  transform-origin: 0;
+  background: linear-gradient(
+    #507EB1,
+    #709DC7 10%,
+    #DDE9F5 40%,
+    #EAF2F9 50%,
+    #F6F9FC 60%)
+}
+.stripes {
+  grid-template-columns: repeat(5, 1fr)
+}

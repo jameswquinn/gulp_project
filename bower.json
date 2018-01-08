@@ -1,0 +1,17 @@
+{
+  "name": "gulp-starter",
+  "description": "You should describe it here.",
+  "main": "gulpfile.js",
+  "authors": [
+    "Jamie Quinn"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jameswquinn/gulp-static-generator-twig",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

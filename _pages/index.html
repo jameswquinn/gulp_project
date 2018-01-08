@@ -1,0 +1,20 @@
+{% extends "../_layouts/_base.html" %}
+{# Change meta tags for twitter:card and facbook #}
+{% block canonical %}/{% endblock %}
+{% block description %}orem ipsum dolor sit amet, consectetur adipisicing elit. Vero laboriosam, at non debitis beatae, assumenda minima quia hic, quis quos eos aut qui totam fugit vel unde libero dolores reprehenderit!{% endblock %}
+{% block og__image %}https://i.pinimg.com/originals/63/00/d7/6300d7105a48cb21d244ec4368268e9a.jpg{% endblock %}
+{% block title %}{% endblock %}
+{% block content %}
+<h1>index</h1>
+
+    <blockquote cite="http://www.apple.com">
+      <p>Neon Demon</p>
+      {{ "now"|date('l jS \of F Y h:i:s A') }}<br/>
+
+      {{ "now"|date("F jS \a\t g:ia")}}
+
+
+    </blockquote>
+    <img src="https://i.pinimg.com/originals/63/00/d7/6300d7105a48cb21d244ec4368268e9a.jpg" alt="">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero laboriosam, at non debitis beatae, assumenda minima quia hic, quis quos eos aut qui totam fugit vel unde libero dolores reprehenderit!</p>
+    {% endblock %}

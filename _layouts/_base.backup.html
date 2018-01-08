@@ -1,0 +1,55 @@
+{# base layout #}
+
+<!DOCTYPE html>
+<html lang="{{site['set__lang']}}">
+<head>
+  {% block head %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% set _block = block('title') %}{% if _block is not empty %}{{ _block|raw }}{% else %}{{site['title']}}{% endif %}</title>
+  <link rel="stylesheet" href="/css/app.min.css">
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <!--MetaTag-->
+  <meta name="description" content="{% set _block = block('description') %}{% if _block is not empty %}{{ _block|raw }}{% else %}{{site['longform__description']}}{% endif %}" />
+  <meta name="copyright" content="{% set _block = block('copyright') %}{% if _block is not empty %}{{ _block|raw }}{% else %}{{site['copyright']}}{% endif %}" />
+  <meta name="robot" content="noindex, nofollow" />
+  <!-- Meta Facebook Markup -->
+  <meta property="og:image" content="{{site['base__url']}}{% set _block = block('ogImage') %}{% if _block is not empty %}{{ _block|raw }}{% else %}{{site['og__image']}}{% endif %}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+  <meta property="og:title" content="{% set _block = block('title') %}{% if _block is not empty %}{{ _block|raw }}{% else %}{{site['title']}}{% endif %}">
+  <meta property="og:description" content="{% set _block = block('description') %}{% if _block is not empty %}{{ _block|raw }}{% else %}{{site['shortform__description']}}{% endif %}">
+  <meta property="og:url" content="{{site['og__url']}}">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="{{site['site__name']}}" />
+  <meta name="twitter:image" content="{{site.base__url}}{% set _block = block('og__image') %}{% if _block is not empty %}{{ _block|raw }}{% else %}{{site['og__image']}}{% endif %}"/>
+  <meta name="twitter:image:alt" content="{% set _block = block('og__alt') %}{% if _block is not empty %}{{ _block|raw }}{% else %}{{site['og__alt']}}{% endif %}" />
+  <meta name="twitter:title" content="{% set _block = block('title') %}{% if _block is not empty %}{{ _block|raw }}{% else %}{{site['title']}}{% endif %}"/>
+  <meta name="twitter:description" content="{% set _block = block('description') %}{% if _block is not empty %}{{ _block|raw }}{% else %}{{site['shortform__description']}}{% endif %}"/>
+{% include '../_includes/_favicon.html' %}
+  <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "{{site['og__url']}}",
+    "name": "{{site['site__name']}}",
+    "description": "{{site['shortform__description']}}"
+}
+</script>
+  {% endblock %}
+</head>
+<body>
+<main id="main" class="container">
+{% include '../_includes/_nav.html' %}
+{% block content %}{% endblock %}
+<div id="footer">
+{% block footer %}{% endblock %}
+</div>
+</main>
+
+{% include '../_includes/_scripts.html' %}
+</body>
+</html>
